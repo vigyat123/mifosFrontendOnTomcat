@@ -129,8 +129,8 @@ http {
         ssl_session_timeout  5m;
         ssl_ciphers  HIGH:!aNULL:!MD5;
         ssl_prefer_server_ciphers  on;
-        location /usr/share/tomcat7-codedeploy/webapps {
-             try_files $uri $uri/;
+        location / {
+             try_files $uri $uri/ /index.html;
         }
         location = /50x.html {
             root   html;
