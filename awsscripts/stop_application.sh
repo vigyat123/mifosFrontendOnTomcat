@@ -3,5 +3,5 @@
 set -e
 
 sudo su
-# STOP the Tomcat Server 
+# STOP the Nginx Server 
 service nginx stop
