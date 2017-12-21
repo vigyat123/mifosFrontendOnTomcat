@@ -67,17 +67,11 @@ http {
         listen [::]:80 default_server;
         server_name ec2-54-89-207-212.compute-1.amazonaws.com;
         return 302 https://$server_name$request_uri;
-        
-        
-        #error_page  404              /404.html;
-        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
-        #
-        
+                 
     }
     
     
     # HTTPS server
-    #
     server {
         listen 443 ssl http2 default_server;
         listen [::]:443 ssl http2 default_server;
