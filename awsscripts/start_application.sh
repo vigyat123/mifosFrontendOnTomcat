@@ -78,8 +78,8 @@ http {
         server_name  ec2-52-55-98-26.compute-1.amazonaws.com;
         root   /tmp/codedeploy-deployment-staging-area/;
         index  index.html index.htm;
-        ssl_certificate      nginx-selfsigned.crt;
-        ssl_certificate_key  nginx-selfsigned.key;
+        ssl_certificate      softcell_openssl_ss.crt;
+        ssl_certificate_key  softcell_openssl_pub.key;
         ssl_session_cache    shared:SSL:1m;
         ssl_session_timeout  5m;
         ssl_ciphers  HIGH:!aNULL:!MD5;
