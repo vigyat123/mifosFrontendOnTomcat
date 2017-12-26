@@ -49,7 +49,7 @@ http {
     keepalive_timeout  65;
     
     # tells the server to use on-the-fly gzip compression.
-    gzip  on;
+    #gzip  on;
     
     server {
         # You would want to make a separate file with its own server block for each virtual domain
