@@ -89,10 +89,10 @@ http {
 #       location / {
 #            try_files $uri $uri/ /index.html;
 #       }
-        location = /50x.html {
-            root   html;
-        }
-    }
+#       location = /50x.html {
+#           root   html;
+#      }
+#  }
 }
 EOF
 service nginx start
