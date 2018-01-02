@@ -12,6 +12,7 @@ phases:
       - tar -cvf dist.tar .
       - mkdir dist
       - tar -xvf dist.tar -C dist
+      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
 artifacts:
   files:
       - dist/**/*
