@@ -6,9 +6,9 @@ phases:
       - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
+      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - pwd
       - tar -cvf dist.tar .
       - mkdir dist
       - tar -xvf dist.tar -C dist
