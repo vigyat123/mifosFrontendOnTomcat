@@ -16,5 +16,6 @@ phases:
 artifacts:
   files:
       - dist/**/*
+      - appspec.yml
 base-directory: mifosFrontend     
 discard-paths: yes
