@@ -1,16 +1,16 @@
 version: 0.0
 os: linux
 files:
-  - source: dist
+  - source: /
     destination: /tmp/codedeploy-deployment-staging-area/
 hooks:
   ApplicationStop:
-    - location: dist/awsscripts/stop_application.sh
+    - location: awsscripts/stop_application.sh
       timeout: 300
   BeforeInstall:
-    - location: dist/awsscripts/install_nginx.sh
+    - location: awsscripts/install_nginx.sh
       timeout: 300
   ApplicationStart:
-    - location: dist/awsscripts/aws_codedeploy_config.sh
-    - location: dist/awsscripts/start_application.sh
+    - location: awsscripts/aws_codedeploy_config.sh
+    - location: awsscripts/start_application.sh
       timeout: 300
