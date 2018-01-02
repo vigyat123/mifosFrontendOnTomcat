@@ -9,17 +9,12 @@ phases:
       - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - tar -cvf dist.tar .
+      - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
+      - echo Creating dist folder for copying all the angular code as well as dependencies
       - mkdir dist
-      - tar -xvf dist.tar -C dist
-      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
+      - tar -xvf angularCodeDependencies.tar -C dist
 artifacts:
   files:
       - dist/**/*
-      - awsscripts/install_nginx.sh
-      - awsscripts/start_application.sh
-      - awsscripts/stop_application.sh
-      - awsscripts/aws_codedeploy_config.sh
-      - appspec.yml
 base-directory: mifosFrontend     
 discard-paths: yes
