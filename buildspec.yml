@@ -6,14 +6,21 @@ phases:
       - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
+      - gem sources -a http://rubygems.org
+      - gem install bundler
+      - bundle install
+     
+# Create a production ready artifact
+    
 #      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-#      - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
-      - tar -cvf angularCodeDependencies.tar .
-#      - echo Creating dist folder for copying all the angular code as well as dependencies
-      - mkdir dist
-      - tar -xvf angularCodeDependencies.tar -C dist
+      - grunt prod
+#     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
+#     - tar -cvf angularCodeDependencies.tar .
+#     - echo Creating dist folder for copying all the angular code as well as dependencies
+#     - mkdir dist
+#     - tar -xvf angularCodeDependencies.tar -C dist
 artifacts:
   files:
       - dist/**/*
