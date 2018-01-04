@@ -3,4 +3,4 @@
 set -e
 
 # STOP the Nginx Server 
-service nginx stop
+service tomcat7 stop
