@@ -17,7 +17,7 @@ phases:
 artifacts:
   files:
       - dist/**/*
-      - awsscripts/install_nginx.sh
+      - awsscripts/install_dependencies.sh
       - awsscripts/start_application.sh
       - awsscripts/stop_application.sh
       - awsscripts/aws_codedeploy_config.sh
