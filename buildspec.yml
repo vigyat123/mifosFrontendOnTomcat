@@ -6,7 +6,7 @@ phases:
       - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
-      - npm install ruby --save
+      - npm install ruby 2.5.0 --save
       - gem sources -a http://rubygems.org
       - gem install bundler
       - bundle install
