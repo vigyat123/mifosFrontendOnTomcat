@@ -26,11 +26,13 @@ phases:
 #     - cat rvm.sh | bash -s stable
 #     - source ~/.rvm/scripts/rvm
 #     - rvm install ruby --default
-      - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
-      - tar -xzvf ruby-2.5.0.tar.gz
-      - ./ruby-2.5.0/configure
-      - make
-      - gem sources -r http://rubygems.org
+#     - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
+#     - tar -xzvf ruby-2.5.0.tar.gz
+#     - ./ruby-2.5.0/configure
+#     - make
+      - sudo apt-get update
+      - sudo apt-get install -y ruby
+      - gem sources -a http://rubygems.org
       - gem install bundler
       - bundle install
      
