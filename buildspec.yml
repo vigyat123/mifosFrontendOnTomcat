@@ -2,10 +2,10 @@ version: 0.1
 phases:
   install:
     commands:
-      - sudo apt-get update
-      - sudo apt-get -y dist-upgrade
+#     - sudo apt-get update 
+#     - sudo apt-get -y dist-upgrade
 #     - sudo apt-cache search ruby
-      - sudo apt-get install -y ruby-full 
+#     - sudo apt-get install -y ruby-full 
       - npm install -g bower
       - npm install grunt-cli
       - bower install --allow-root
@@ -34,10 +34,10 @@ phases:
 #     - tar -xzvf ruby-2.5.0.tar.gz
 #     - ./ruby-2.5.0/configure
 #     - make 
-      - ruby -v
-      - sudo gem sources -a http://rubygems.org
-      - sudo gem install bundler
-      - sudo gem install ffi -v '1.9.18'
+#     - ruby -v
+      - gem sources -a http://rubygems.org
+      - gem install bundler
+#     - gem install ffi -v '1.9.18'
       - bundle install      
      
 # Create a production ready artifact
@@ -45,7 +45,7 @@ phases:
 #      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - grunt --force prod
+      - grunt prod
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
 #     - echo Creating dist folder for copying all the angular code as well as dependencies
