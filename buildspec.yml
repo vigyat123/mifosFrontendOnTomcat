@@ -3,6 +3,7 @@ phases:
   install:
     commands:
       - sudo apt-get update
+      - sudo apt-get dist-upgrade
 #     - sudo apt-cache search ruby
       - sudo apt-get install -y ruby-full 
       - npm install -g bower
