@@ -16,13 +16,13 @@ phases:
 #     - cat rvm.sh | bash -s stable
 #     - source ~/.rvm/scripts/rvm
 #     - rvm install ruby --default
-      - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
-      - tar -xzvf ruby-2.5.0.tar.gz
-      - ./ruby-2.5.0/configure
-      - make
-      - ./ruby-2.5.0/gem sources -a http://rubygems.org
-      - ./ruby-2.5.0/gem install bundler
-      - bundle install
+#     - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
+#     - tar -xzvf ruby-2.5.0.tar.gz
+#     - ./ruby-2.5.0/configure
+#     - make
+#     - ./ruby-2.5.0/gem sources -a http://rubygems.org
+#     - ./ruby-2.5.0/gem install bundler
+#     - bundle install
      
 # Create a production ready artifact
     
