@@ -18,7 +18,7 @@ phases:
 #     - rvm install ruby --default
       - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
       - tar -xzvf ruby-2.5.0.tar.gz
-      - cd ruby-2.5.0/
+      - sudo cd ruby-2.5.0/
       - ls -al
       - ./configure
       - make
