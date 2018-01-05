@@ -34,6 +34,7 @@ phases:
 #     - make 
       - gem sources -a http://rubygems.org
       - gem install bundler
+      - exit
       - bundle install
      
 # Create a production ready artifact
