@@ -2,6 +2,8 @@ version: 0.1
 phases:
   install:
     commands:
+      - sudo apt-get update
+      - sudo apt-get install -y ruby
       - npm install -g bower
       - npm install -g grunt-cli
       - bower install --allow-root
@@ -29,9 +31,7 @@ phases:
 #     - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
 #     - tar -xzvf ruby-2.5.0.tar.gz
 #     - ./ruby-2.5.0/configure
-#     - make
-      - sudo apt-get update
-      - sudo apt-get install -y ruby
+#     - make 
       - gem sources -a http://rubygems.org
       - gem install bundler
       - bundle install
