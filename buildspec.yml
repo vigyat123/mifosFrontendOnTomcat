@@ -3,7 +3,8 @@ phases:
   install:
     commands:
       - sudo apt-get update
-      - sudo apt-get install -y ruby
+      - apt-get autoremove libcurl3-gnutls
+      - sudo apt-get install -y ruby 2.5.0
       - npm install -g bower
       - npm install -g grunt-cli
       - bower install --allow-root
@@ -34,7 +35,7 @@ phases:
 #     - make 
       - sudo gem sources -a http://rubygems.org
       - sudo gem install bundler
-      - gem install ffi 1.9.3
+#     - gem install ffi 1.9.3
       - bundle install      
      
 # Create a production ready artifact
