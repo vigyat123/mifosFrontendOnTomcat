@@ -6,8 +6,10 @@ phases:
       - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
-      - npm install ruby 2.3.6 --save
-      - gem sources -a http://rubygems.org
+      - wget http://production.cf.rubygems.org/rubygems/rubygems-1.5.0.tgz
+      - tar xvf rubygems*
+      - ruby setup.rb
+#     - gem sources -a http://rubygems.org
       - gem install bundler
       - bundle install
      
