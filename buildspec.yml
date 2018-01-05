@@ -20,10 +20,9 @@ phases:
       - tar -xzvf ruby-2.5.0.tar.gz
       - ./ruby-2.5.0/configure
       - make
-      - which gem
-#     - ./ruby-2.5.0/gem sources -a http://rubygems.org
-#     - ./ruby-2.5.0/gem install bundler
-#     - bundle install
+#     - gem sources -a http://rubygems.org
+      - ./ruby-2.5.0/gem install bundler
+      - bundle install
      
 # Create a production ready artifact
     
