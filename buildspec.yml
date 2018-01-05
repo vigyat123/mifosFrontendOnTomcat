@@ -3,6 +3,7 @@ phases:
   install:
     commands:
       - sudo apt-get update
+      - sudo apt-cache search ruby
       - sudo apt-get install -y ruby-full 
       - npm install -g bower
       - npm install -g grunt-cli
@@ -43,7 +44,7 @@ phases:
 #      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - grunt prod
+      - grunt --force prod
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
 #     - echo Creating dist folder for copying all the angular code as well as dependencies
