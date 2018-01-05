@@ -1,4 +1,8 @@
-source "https://rubygems.org"
+backtrace 'false'
+bulk_threshold '1000'
+sources 'http://rubygems.org'
+update_sources 'true"'
+verbose 'true'
 gem 'compass', '~> 1'
 gem 'sass-css-importer', '~> 1.0.0.beta.0'
 gem 'scss_lint', '~> 0'
