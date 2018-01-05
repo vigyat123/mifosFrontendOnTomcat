@@ -19,10 +19,9 @@ phases:
       - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
       - tar -xzvf ruby-2.5.0.tar.gz
       - ./ruby-2.5.0/configure
-      - ./ruby-2.5.0/make
-      - sudo ./ruby-2.5.0/make install
-      - gem sources -a http://rubygems.org
-      - gem install bundler
+      - make
+      - ./ruby-2.5.0/gem sources -a http://rubygems.org
+      - ./ruby-2.5.0/gem install bundler
       - bundle install
      
 # Create a production ready artifact
