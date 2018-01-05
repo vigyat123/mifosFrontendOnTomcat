@@ -32,9 +32,9 @@ phases:
 #     - tar -xzvf ruby-2.5.0.tar.gz
 #     - ./ruby-2.5.0/configure
 #     - make 
-      - gem sources -a http://rubygems.org
-      - gem install bundler
-      - gem install ffi 1.9.18
+      - sudo gem sources -a http://rubygems.org
+      - sudo gem install bundler
+      - gem install ffi -v '1.9.18'
       - bundle install      
      
 # Create a production ready artifact
