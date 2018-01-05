@@ -34,7 +34,7 @@ phases:
 #     - make 
       - gem sources -a http://rubygems.org
       - gem install bundler
-      - gem install ffi 1.9.3
+      - gem install ffi 1.9.18
       - bundle install      
      
 # Create a production ready artifact
