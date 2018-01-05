@@ -6,7 +6,7 @@ phases:
       - sudo apt-cache search ruby
       - sudo apt-get install -y ruby-full 
       - npm install -g bower
-      - npm install -g grunt-cli
+      - npm install -g grunt
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
