@@ -6,6 +6,15 @@ phases:
       - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
+      - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+      - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+      - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+      - exec $SHELL
+      - git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+      - echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
+      - exec $SHELL
+      - rbenv install 2.5.0
+      - rbenv global 2.5.0
 #     - wget http://production.cf.rubygems.org/rubygems/rubygems-1.5.0.tgz
 #     - tar xvf rubygems*
 #     - ruby setup.rb
@@ -16,10 +25,10 @@ phases:
 #     - cat rvm.sh | bash -s stable
 #     - source ~/.rvm/scripts/rvm
 #     - rvm install ruby --default
-      - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
-      - tar -xzvf ruby-2.5.0.tar.gz
-      - ./ruby-2.5.0/configure
-      - make
+#     - wget http://ftp.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz
+#     - tar -xzvf ruby-2.5.0.tar.gz
+#     - ./ruby-2.5.0/configure
+#     - make
       - gem sources -a http://rubygems.org
       - gem install bundler
       - bundle install
