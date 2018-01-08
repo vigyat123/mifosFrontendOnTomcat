@@ -48,7 +48,7 @@ phases:
 #     - ./ruby-2.5.0/configure
 #     - make 
 #     - ruby -v
-      - gem sources -a -y http://rubygems.org
+      - gem sources -ay http://rubygems.org
       - gem install bundler
 #     - gem install ffi -v '1.9.18'
       - bundle install      
