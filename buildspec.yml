@@ -2,18 +2,6 @@ version: 0.2
 phases:
   install:
     commands:
-      - gem sources -a http://rubygems.org
-      - /etc/profile.d/nvm.sh &> /dev/null
-      - type nvm &> /dev/null
-      - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
-      - echo "source /etc/profile.d/nvm.sh" >> /etc/bash.bashrc
-      - /etc/profile.d/nvm.sh &> /dev/null
-#     - export NVM_DIR="$HOME/.nvm"
-#     - [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-#     - [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-#     - . ~/.nvm/nvm.sh
-      - nvm install 6.11.5
-#     - node -e "console.log('Running Node.js ' + process.version)"
 #     - sudo apt-get update 
 #     - sudo apt-get -y dist-upgrade
 #     - sudo apt-cache search ruby
@@ -60,7 +48,7 @@ phases:
 #     - ./ruby-2.5.0/configure
 #     - make 
 #     - ruby -v
-      - gem sources -a http://rubygems.org
+      - gem sources -a -y http://rubygems.org
       - gem install bundler
 #     - gem install ffi -v '1.9.18'
       - bundle install      
