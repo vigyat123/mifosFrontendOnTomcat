@@ -5,7 +5,12 @@ phases:
 #     - sudo apt-get update 
 #     - sudo apt-get -y dist-upgrade
 #     - sudo apt-cache search ruby
-#     - sudo apt-get install -y ruby-full 
+#     - sudo apt-get install -y ruby-full
+      - sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+      - curl -L https://get.rvm.io | bash -s stable --ruby
+      - sudo usermod -a -G rvm `whoami`
+      - rvm install ruby
+      - rvm --default use ruby
       - npm install -g bower
       - npm install grunt-cli
       - bower install --allow-root
