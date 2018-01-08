@@ -2,6 +2,7 @@ version: 0.2
 phases:
   install:
     commands:
+      - gem sources -a http://rubygems.org
       - /etc/profile.d/nvm.sh &> /dev/null
       - type nvm &> /dev/null
       - curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
