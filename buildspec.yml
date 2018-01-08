@@ -22,7 +22,7 @@ phases:
 #     - /etc/profile.d/rvm.sh &> /dev/null
       
       - if sudo grep -q secure_path /etc/sudoers; then sudo sh -c "echo export rvmsudo_secure_path=1 >> /etc/profile.d/rvm_secure_path.sh" && echo Environment variable installed; fi
-      - shutdown -r now
+      - sudo shutdown -r now
 #     - source /usr/local/rvm/scripts/rvm
       - rvm install ruby
       - rvm --default use ruby
