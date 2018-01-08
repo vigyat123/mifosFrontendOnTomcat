@@ -23,6 +23,7 @@ phases:
       - npm install grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
+      - 
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 #     - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 #     - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -48,7 +49,7 @@ phases:
 #     - ./ruby-2.5.0/configure
 #     - make 
 #     - ruby -v
-      - gem sources -ay http://rubygems.org
+      - gem sources -a http://rubygems.org
       - gem install bundler
 #     - gem install ffi -v '1.9.18'
       - bundle install      
