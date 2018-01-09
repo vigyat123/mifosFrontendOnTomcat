@@ -62,7 +62,7 @@ phases:
 #     - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - grunt --force prod
+      - sudo grunt --force prod
       - ls -al
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
