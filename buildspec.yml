@@ -24,6 +24,7 @@ phases:
       - npm install grunt --save-dev
       - grunt --version
       - cat Gruntfile.js
+      - cat package.json
 #     - npm install grunt --save-dev
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
