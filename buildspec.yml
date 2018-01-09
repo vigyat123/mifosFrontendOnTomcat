@@ -28,6 +28,7 @@ phases:
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
       - npm install --save-dev load-grunt-tasks
+      - npm install --save-dev jshint-stylish
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 #     - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 #     - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
