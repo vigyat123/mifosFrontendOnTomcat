@@ -20,13 +20,14 @@ phases:
 #     - rvm install ruby
 #     - rvm --default use ruby
       - npm install -g bower
-      - npm install grunt --save-dev
       - npm install -g grunt-cli
+      - npm install grunt --save-dev
       - grunt --version
       - cat Gruntfile.js
 #     - npm install grunt --save-dev
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
+      - npm install --save-dev load-grunt-tasks
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 #     - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 #     - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -62,7 +63,7 @@ phases:
 #     - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - sudo grunt --force prod
+      - grunt prod
       - ls -al
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
