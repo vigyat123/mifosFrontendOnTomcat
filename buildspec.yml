@@ -20,8 +20,9 @@ phases:
 #     - rvm install ruby
 #     - rvm --default use ruby
       - npm install -g bower
-#     - npm install -g grunt-cli
-      - npm install grunt --save-dev
+      - npm install -g grunt-cli
+      - grunt --version
+#     - npm install grunt --save-dev
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -59,7 +60,7 @@ phases:
 #     - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
-      - grunt --force prod
+      - grunt prod
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
 #     - echo Creating dist folder for copying all the angular code as well as dependencies
