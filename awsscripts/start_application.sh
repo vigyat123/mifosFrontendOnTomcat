@@ -25,7 +25,7 @@ if [[ -d $CATALINA_HOME/webapps/$CONTEXT_PATH ]]; then
 fi
 
 # Copy the WAR file to the webapps directory
-cp -r $WAR_STAGED_LOCATION/app/. $CATALINA_HOME/webapps/$CONTEXT_PATH
+cp -r $WAR_STAGED_LOCATION/community-app/. $CATALINA_HOME/webapps/$CONTEXT_PATH
 #cp -r $WAR_STAGED_LOCATION/test $CATALINA_HOME/webapps/$CONTEXT_PATH
 
 
