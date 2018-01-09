@@ -62,6 +62,7 @@ phases:
   pre_build:
     commands:
       - grunt --force prod
+      - ls -al
 #     - tar -cvf angularCodeDependencies.tar $CODEBUILD_SRC_DIR
 #     - tar -cvf angularCodeDependencies.tar .
 #     - echo Creating dist folder for copying all the angular code as well as dependencies
