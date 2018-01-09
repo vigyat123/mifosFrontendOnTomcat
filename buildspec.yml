@@ -19,10 +19,10 @@ phases:
 #     - source /usr/local/rvm/scripts/rvm
 #     - rvm install ruby
 #     - rvm --default use ruby
-      - npm install -g bower
-      - npm install grunt-cli
-      - bower install --allow-root
-      - npm install --save-dev @angular/cli@latest
+#     - npm install -g bower
+#     - npm install grunt-cli
+#     - bower install --allow-root
+#     - npm install --save-dev @angular/cli@latest
       - echo $HOME
       - cd ~
       - ls -al
