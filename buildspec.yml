@@ -20,8 +20,8 @@ phases:
 #     - rvm install ruby
 #     - rvm --default use ruby
       - npm install -g bower
-      - npm install -g grunt-cli
       - npm install grunt --save-dev
+      - npm install -g grunt-cli
       - grunt --version
 #     - npm install grunt --save-dev
       - bower install --allow-root
