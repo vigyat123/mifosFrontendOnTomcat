@@ -24,7 +24,7 @@ phases:
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
       - echo $HOME
-      - ls -al
+      - ls -al ~
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 #     - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 #     - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
