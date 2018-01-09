@@ -19,15 +19,10 @@ phases:
 #     - source /usr/local/rvm/scripts/rvm
 #     - rvm install ruby
 #     - rvm --default use ruby
-#     - npm install -g bower
-#     - npm install grunt-cli
-#     - bower install --allow-root
-#     - npm install --save-dev @angular/cli@latest
-      - echo $HOME
-      - cd ~
-      - ls -al
-      - cd .gem
-      - ls -al
+      - npm install -g bower
+      - npm install grunt-cli
+      - bower install --allow-root
+      - npm install --save-dev @angular/cli@latest
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 #     - echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 #     - echo 'eval "$(rbenv init -)"' >> ~/.bashrc
@@ -53,14 +48,14 @@ phases:
 #     - ./ruby-2.5.0/configure
 #     - make 
 #     - ruby -v
-      - gem sources -a http://rubygems.org
+      - gem sources -a https://rubygems.org
       - gem install bundler
 #     - gem install ffi -v '1.9.18'
       - bundle install      
      
 # Create a production ready artifact
     
-#      - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
+#     - echo CODEBUILD_SRC_DIR - $CODEBUILD_SRC_DIR
   pre_build:
     commands:
       - grunt prod
