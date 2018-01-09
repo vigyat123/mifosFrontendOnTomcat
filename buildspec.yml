@@ -20,7 +20,7 @@ phases:
 #     - rvm install ruby
 #     - rvm --default use ruby
       - npm install -g bower
-      - npm install grunt-cli
+      - npm install -g grunt-cli
       - bower install --allow-root
       - npm install --save-dev @angular/cli@latest
 #     - git clone https://github.com/rbenv/rbenv.git ~/.rbenv
