@@ -5,12 +5,12 @@ files:
     destination: /tmp/codedeploy-deployment-staging-area-angular/
 hooks:
   ApplicationStop:
-    - location: awsscripts/stop_application.sh
+    - location: /etc/awsscripts/stop_application.sh
       timeout: 300
   BeforeInstall:
-    - location: awsscripts/install_dependencies.sh
+    - location: /etc/awsscripts/install_dependencies.sh
       timeout: 300
   ApplicationStart:
-    - location: awsscripts/aws_codedeploy_config.sh
-    - location: awsscripts/start_application.sh
+    - location: /etc/awsscripts/aws_codedeploy_config.sh
+    - location: /etc/awsscripts/start_application.sh
       timeout: 300
