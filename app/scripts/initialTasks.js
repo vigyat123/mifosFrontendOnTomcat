@@ -1,27 +1,27 @@
-
-
 (function (mifosX) {
     var defineHeaders = function ($httpProvider, $translateProvider, ResourceFactoryProvider, HttpServiceProvider, $idleProvider, $keepaliveProvider, IDLE_DURATION, WARN_DURATION, KEEPALIVE_INTERVAL) {
         var mainLink = getLocation(window.location.href);
-        var baseApiUrl = "https://ec2-34-229-232-200.compute-1.amazonaws.com";
+        var baseApiUrl = "https://demo.openmf.org";
         var host = "";
         var portNumber = "";
         //accessing from openmf server
-        if (mainLink.hostname.indexOf('fineract-provider/api/v1') >= 0) {
-               
-            if (QueryParameters["baseApiUrl"]) {
-                baseApiUrl = QueryParameters["baseApiUrl"];
+        if (mainLink.hostname.indexOf('openmf.org') >= 0) {
+            var hostname = window.location.hostname;
+            console.log('hostname---' + hostname);
+            domains = hostname.split('.');
+            console.log('domains---' + domains);
+            // For multi tenant hosting
+            if (domains[0] == "demo") {
+                $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
+                ResourceFactoryProvider.setTenantIdenetifier('default');
+                console.log("demo server", domains[0]);
+            } else {
+                $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = domains[0];
+                ResourceFactoryProvider.setTenantIdenetifier(domains[0]);
+                console.log("other than demo server", domains[0]);
             }
-            var queryLink = getLocation(baseApiUrl);
-            host = "https://" + queryLink.hostname + (queryLink.port ? ':' + queryLink.port : '');
-            portNumber = queryLink.port;
-
-            $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = 'default';
-            ResourceFactoryProvider.setTenantIdenetifier('default');
-            if (QueryParameters["tenantIdentifier"]) {
-                $httpProvider.defaults.headers.common['Fineract-Platform-TenantId'] = QueryParameters["tenantIdentifier"];
-                ResourceFactoryProvider.setTenantIdenetifier(QueryParameters["tenantIdentifier"]);
-            }
+            host = "https://" + mainLink.hostname;
+            console.log('hostname from mainLink = ', host);
         }
         //accessing from a file system or other servers
         else {
