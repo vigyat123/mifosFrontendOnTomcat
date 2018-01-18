@@ -3,15 +3,12 @@
 (function (mifosX) {
     var defineHeaders = function ($httpProvider, $translateProvider, ResourceFactoryProvider, HttpServiceProvider, $idleProvider, $keepaliveProvider, IDLE_DURATION, WARN_DURATION, KEEPALIVE_INTERVAL) {
         var mainLink = getLocation(window.location.href);
-        var baseApiUrl = "https://demo.openmf.org";
+        var baseApiUrl = "https://ec2-34-229-232-200.compute-1.amazonaws.com";
         var host = "";
         var portNumber = "";
         //accessing from openmf server
         if (mainLink.hostname.indexOf('fineract-provider/api/v1') >= 0) {
-            
-            baseApiUrl = "https://" + "ec2-34-229-232-200.compute-1.amazonaws.com/fineract-provider/api/v1/" + (mainLink.port ? ':' + mainLink.port : '');
-            
-
+               
             if (QueryParameters["baseApiUrl"]) {
                 baseApiUrl = QueryParameters["baseApiUrl"];
             }
