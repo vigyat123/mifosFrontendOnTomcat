@@ -8,9 +8,9 @@
         var portNumber = "";
         //accessing from openmf server
         if (mainLink.hostname.indexOf('fineract-provider/api/v1') >= 0) {
-            if (mainLink.hostname != "") {
-                baseApiUrl = "https://" + ec2-34-229-232-200.compute-1.amazonaws.com/fineract-provider/api/v1/ + (mainLink.port ? ':' + mainLink.port : '');
-            }
+            
+            baseApiUrl = "https://" + "ec2-34-229-232-200.compute-1.amazonaws.com/fineract-provider/api/v1/" + (mainLink.port ? ':' + mainLink.port : '');
+            
 
             if (QueryParameters["baseApiUrl"]) {
                 baseApiUrl = QueryParameters["baseApiUrl"];
