@@ -1,7 +1,7 @@
 (function (module) {
     mifosX.services = _.extend(module, {
         ResourceFactoryProvider: function () {
-            var baseUrl = "https://ec2-34-229-232-200.compute-1.amazonaws.com" , apiVer = "/fineract-provider/api/v1", tenantIdentifier = "";
+            var baseUrl = "" , apiVer = "https://ec2-34-229-232-200.compute-1.amazonaws.com/fineract-provider/api/v1", tenantIdentifier = "";
             this.setBaseUrl = function (url) {
                 baseUrl = url;
                 console.log(baseUrl);
